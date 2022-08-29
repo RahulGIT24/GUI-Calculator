@@ -9,14 +9,14 @@ class GUI(Tk):
     def __init__(self):
         super().__init__()
         #! Width of calculator
-        self.width = '350'
+        self.width = '465'
         #! Height of calculator
-        self.height = '400'
+        self.height = '618'
         self.geometry(f"{self.width}x{self.height}")
         #! Max height and width of calculator
-        self.maxsize(350, 450)
+        self.maxsize(465, 618)
         #! Min height and width of calculator
-        self.minsize(350, 450)
+        self.minsize(465, 618)
         #! Title of calculator
         self.title("Calculator")
         #! Icon of calculator
@@ -31,7 +31,7 @@ class GUI(Tk):
         inputValue = StringVar()
         inputValue.set('')
         self.valueEntry = Entry(
-            f, textvariable=inputValue, font=('Arial 18'))
+            f, textvariable=inputValue, font=('Arial 25'))
         self.valueEntry.pack(fill=X)
         f.pack(fill=X, padx=12, pady=4)
 
@@ -63,102 +63,102 @@ class GUI(Tk):
         global btn
         f = Frame(self, bg="gray")
         btn = Button(f, text='+', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='-', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='*', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
 
         # * This button removes last element from the screen I have not added an event because I have already created a function for it
         btn = Button(f, text='CE', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold", command=self.back)
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold", command=self.back)
+        btn.pack(side=LEFT,  padx=13, pady=13)
 
         f.pack(fill=X,)
 
         f = Frame(self, bg='gray')
         btn = Button(f, text='7', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='8', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='9', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
 
         # * This button removes all element from the screen I have not added an event because I have already created a function for it
         btn = Button(f, text='C', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold", command=self.clearScreen)
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold", command=self.clearScreen)
+        btn.pack(side=LEFT,  padx=13, pady=13)
 
         f.pack(fill=X)
 
         f = Frame(self, bg='gray')
         btn = Button(f, text='4', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='5', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='6', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='/', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
-        f.pack()
+        f.pack(fill=X)
 
         f = Frame(self, bg='gray')
         btn = Button(f, text='1', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='2', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='3', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=LEFT, anchor='n', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=LEFT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='%', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=RIGHT, anchor='w', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=RIGHT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         f.pack(fill=X)
 
         f = Frame(self, bg='gray')
         # * This button evalutes the information available on the screen last element from the screen I have not added an event because I have already created a function for it
         btn = Button(f, text='=', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold", command=self.calulateVal)
-        btn.pack(side=RIGHT, anchor='w', padx=13,
+                     pady=12, relief=SUNKEN, font="Arial 24 bold", command=self.calulateVal)
+        btn.pack(side=RIGHT,  padx=13,
                  pady=13)
 
         btn = Button(f, text='0', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=RIGHT, anchor='w', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=RIGHT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='00', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=RIGHT, anchor='w', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=RIGHT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         btn = Button(f, text='.', bg='red', fg='black', padx=23,
-                     pady=12, relief=SUNKEN, font="Arial 10 bold")
-        btn.pack(side=RIGHT, anchor='w', padx=13, pady=13)
+                     pady=12, relief=SUNKEN, font="Arial 24 bold")
+        btn.pack(side=RIGHT,  padx=13, pady=13)
         btn.bind("<Button-1>", self.click)
         f.pack(fill=X)
 
